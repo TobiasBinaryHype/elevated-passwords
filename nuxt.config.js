@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'elevated-passwords',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~assets/css/variables.css", "~assets/css/normalize.css", "~assets/css/fonts.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

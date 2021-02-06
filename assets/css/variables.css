@@ -1,0 +1,16 @@
+:root {
+  --color-primary1: #081c15;
+  --color-primary2: #1b4332;
+  --color-primary3: #2d6a4f;
+  --color-primary4: #40916c;
+  --color-primary5: #52b788;
+  --color-primary6: #74c69d;
+  --color-primary7: #95d5b2;
+  --color-primary8: #b7e4c7;
+  --color-primary8: #d8f3dc;
+  --color-lightgray: #f2f2f2;
+  --color-highlight: #ef8f22;
+  --font-family: 'Poppins';
+  --content-width: 1640px;
+  --break-desktop: 1280px;
+}
