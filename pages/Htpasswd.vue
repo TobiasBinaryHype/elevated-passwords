@@ -1,11 +1,12 @@
 <template>
     <div class="generator">
-        <div>
-            <h1 class="title">
-                Htpasswd
+        <h1 class="title">
+                Elevated Passwords
             </h1>
-        </div>
-    </div>
+            <div class="subheadline">Schnell und sicher ein zufälliges Passwort generieren.
+                Lokal im Browser - ohne Umwege.</div>
+        <HtpasswdGenerator />
+    </div> 
 </template>
 
 <script>
@@ -19,5 +20,5 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 </style>
