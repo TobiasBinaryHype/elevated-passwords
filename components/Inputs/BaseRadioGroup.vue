@@ -7,9 +7,9 @@
             <BaseRadio
                 :label="option.label"
                 :value="option.value"
-                :modelValue="modelValue"
                 :name="name"
-                @update:modelValue="$emit('input', $event)"
+                :modelValue="value"
+                @input="$emit('input', $event)"
             />
         </div>
     </div>
@@ -29,11 +29,7 @@ export default {
         value: {
             type: [String, Number],
         },
-        modelValue: {
-            type: [String, Number],
-            default: '',
-        },
-    }
+    },
 }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <input
+         <input
             type="radio"
-            :selected="modelValue === value"
+            :checked="modelValue === value"
             :value="value"
             v-bind="$attrs"
-            @change="$emit('update:modelValue', value)"
+            @change="$emit('input', value)"
         />
         <label v-if="label">{{ label }}</label>
     </div>
@@ -18,14 +18,13 @@ export default {
             type: String,
             default: '',
         },
-        modelValue: {
-            type: [String, Number],
-            default: '',
-        },
         value: {
             type: [String, Number],
             required: true,
         },
+        modelValue: {
+            type: [String, Number],
+        }
     },
 }
 </script>
