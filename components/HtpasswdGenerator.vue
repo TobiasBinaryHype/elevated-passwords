@@ -18,6 +18,13 @@
             name="cryptTypes"
             :options="cryptTypes"
         />
+        <BaseInput
+            v-model="result"
+            :bigFont="true"
+            :readonly="true"
+            placeholder="Ergebnis"
+            class="result"
+        ></BaseInput>
         <div
             class="error"
             v-if="error"
@@ -44,12 +51,13 @@ export default {
         }
     },
     methods: {
-        generatePassword() {
+        generateHtpasswd() {
             try {
                 this.error = ''
-                this.resultPassword = PasswordService.generatePassword(
-                    this.selectedTypes,
-                    this.passwordLength
+                this.result = PasswordService.generateHash(
+                    this.username,
+                    this.password,
+                    this.selectedCryptType
                 )
             } catch (e) {
                 this.error = e
@@ -65,7 +73,7 @@ export default {
     background-color: var(--color-primary8);
     border-radius: 26px;
     box-shadow: 0px 3px 11px rgba(45, 106, 79, 0.5);
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 @media (max-width: 1280px) {
@@ -78,11 +86,23 @@ export default {
 .username-password {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .username-password > * {
     flex: 1 1 50%;
-    padding: 1rem 2rem;
+}
+
+.username-password > *:first-child {
+    padding-right: 2rem;
+}
+
+.username-password > *:last-child {
+    padding-left: 2rem;
+}
+
+.result {
+    margin-bottom: 2rem;
 }
 
 .error {

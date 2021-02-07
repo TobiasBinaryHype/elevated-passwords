@@ -14,7 +14,7 @@ export default {
     name: 'Htpasswd',
     head() {
         return {
-            title: 'Htpasswd Generator',
+            title: '.htpasswd Generator',
         }
     },
 }

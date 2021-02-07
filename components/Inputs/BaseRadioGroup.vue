@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="radios">
         <div
             v-for="option in options"
             :key="option.value"
@@ -34,4 +34,9 @@ export default {
 </script>
 
 <style scoped>
+.radios {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
 </style>

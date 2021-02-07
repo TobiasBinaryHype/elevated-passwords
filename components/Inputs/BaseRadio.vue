@@ -1,13 +1,18 @@
 <template>
     <div>
-         <input
-            type="radio"
-            :checked="modelValue === value"
-            :value="value"
-            v-bind="$attrs"
-            @change="$emit('input', value)"
-        />
-        <label v-if="label">{{ label }}</label>
+        <label
+            class="radio"
+            v-if="label"
+        >
+            <input
+                type="radio"
+                :checked="modelValue === value"
+                :value="value"
+                v-bind="$attrs"
+                @change="$emit('input', value)"
+            />
+            <span class="radiobox"></span>
+            {{ label }}</label>
     </div>
 </template>
 
@@ -24,7 +29,45 @@ export default {
         },
         modelValue: {
             type: [String, Number],
-        }
+        },
     },
 }
 </script>
+
+<style scoped>
+.radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 1rem;
+}
+
+.radiobox {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input:checked + .radiobox:before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: var(--color-primary2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+span {
+    display: inline-block;
+}
+
+input {
+    display: none;
+}
+</style>

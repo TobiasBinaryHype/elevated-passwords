@@ -1,3 +1,5 @@
+import CryptoJS from 'crypto-js'
+
 const generateEasyRemeberPassword = () => {
   let vowels = 'aeiou'
   let consonants = 'bcdfghjklmnpqrstvwxyz'
@@ -133,6 +135,22 @@ const getRandomNumber = (max, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+const generateHash = (username, password, cryptType = 'md5') => {
+  let hash = ''
+
+  switch (cryptType) {
+    case 'md5':
+      hash = CryptoJS.MD5(password).toString()
+      break
+    case 'sha1':
+      hash = CryptoJS.SHA1(password).toString()
+      break
+  }
+
+  return `${username}:${hash}`
+}
+
 export default {
   generatePassword,
+  generateHash,
 }
