@@ -1,18 +1,24 @@
 <template>
-    <div class="generator">
-        <div>
-            <h1 class="title">
-                Elevated Passwords
-            </h1>
-            <div class="subheadline">Schnell und sicher ein zufälliges Passwort generieren.
-                Lokal im Browser - ohne Umwege.</div>
-            <PasswordGenerator />
+    <div>
+        <div class="generator">
+            <div>
+                <h1 class="title">
+                    Elevated Passwords
+                </h1>
+                <div class="subheadline">Schnell und sicher ein zufälliges Passwort generieren.
+                    Lokal im Browser - ohne Umwege.</div>
+                <PasswordGenerator />
+            </div>
         </div>
+        <Content />
     </div>
 </template>
 
 <script>
+import Content from '~/components/Content.vue'
+
 export default {
+    components: { Content },
     name: 'Index',
     head() {
         return {
