@@ -1,5 +1,5 @@
 import md5 from 'crypto-js/md5'
-import sha1 from 'crypto-js/sha1';
+import sha1 from 'crypto-js/sha1'
 
 const generateEasyRemeberPassword = () => {
   let vowels = 'aeiou'
@@ -138,7 +138,7 @@ const getRandomNumber = (max, min = 0) => {
 
 const generateHash = (username, password, cryptType = 'md5') => {
   if (!username || !password) throw 'Bitte Nutzername und Passwort eingeben.'
-  
+
   let hash = ''
 
   switch (cryptType) {

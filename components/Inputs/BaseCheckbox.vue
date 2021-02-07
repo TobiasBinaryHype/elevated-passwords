@@ -1,8 +1,9 @@
 <template>
-    <label class="slidercheckbox">
+    <label :for="label" class="slidercheckbox">
         <input
             type="checkbox"
             :checked="value"
+            :id="label"
             @change="$emit('input', $event.target.checked)"
         >
         <div class="slider">

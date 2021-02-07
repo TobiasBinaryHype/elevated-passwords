@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label v-if="label">{{ label }}</label>
+        <label :for="label" v-if="label">{{ label }}</label>
         <input
             :value="value"
             :placeholder="placeholder"
@@ -8,6 +8,7 @@
             type="text"
             :class="{'big-font': bigFont}"
             :readonly="readonly"
+            :id="label"
         >
     </div>
 </template>

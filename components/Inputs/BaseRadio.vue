@@ -3,6 +3,7 @@
         <label
             class="radio"
             v-if="label"
+            :for="label"
         >
             <input
                 type="radio"
@@ -10,6 +11,7 @@
                 :value="value"
                 v-bind="$attrs"
                 @change="$emit('input', value)"
+                :id="label"
             />
             <span class="radiobox"></span>
             {{ label }}</label>
