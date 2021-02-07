@@ -101,6 +101,18 @@ h3,
 h4 {
     color: var(--color-primary2);
 }
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 1.2em;
+    }
+}
 </style>
 
 <style scoped>

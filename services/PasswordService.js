@@ -136,6 +136,8 @@ const getRandomNumber = (max, min = 0) => {
 }
 
 const generateHash = (username, password, cryptType = 'md5') => {
+  if (!username || !password) throw 'Bitte Nutzername und Passwort eingeben.'
+  
   let hash = ''
 
   switch (cryptType) {
