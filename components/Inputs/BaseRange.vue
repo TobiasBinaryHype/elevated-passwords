@@ -1,6 +1,9 @@
 <template>
     <div class="base-range">
-        <div class="range-text">{{label}}</div>
+        <label
+            :for="label"
+            class="range-text"
+        >{{label}}</label>
         <div class="input-wrapper">
             <input
                 type="number"
@@ -9,9 +12,9 @@
                 step="1"
                 :min="min"
                 :max="max"
+                :id="label"
             />
             <input
-                class="test"
                 type="range"
                 v-model.number="rangeValue"
                 @input="$emit('input', updateValue($event))"
@@ -67,9 +70,6 @@ export default {
 .input-wrapper {
     display: flex;
     align-items: center;
-}
-
-.input-wrapper > * {
 }
 
 input[type='range'] {

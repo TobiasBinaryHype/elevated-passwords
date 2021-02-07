@@ -14,7 +14,7 @@
                 label="Passwortlänge"
                 v-model="passwordLength"
                 :max="30"
-                :min="2"
+                :min="4"
             />
             <div class="generator-checkboxes">
                 <BaseCheckbox
