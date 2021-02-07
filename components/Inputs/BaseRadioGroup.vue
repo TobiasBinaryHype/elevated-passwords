@@ -1,16 +1,22 @@
 <template>
-    <div class="radios">
-        <div
-            v-for="option in options"
-            :key="option.value"
-        >
-            <BaseRadio
-                :label="option.label"
-                :value="option.value"
-                :name="name"
-                :modelValue="value"
-                @input="$emit('input', $event)"
-            />
+    <div class="radios-wrapper">
+        <span
+            v-if="label"
+            class="radios-label"
+        >{{label}}</span>
+        <div class="radios">
+            <div
+                v-for="option in options"
+                :key="option.value"
+            >
+                <BaseRadio
+                    :label="option.label"
+                    :value="option.value"
+                    :name="name"
+                    :modelValue="value"
+                    @input="$emit('input', $event)"
+                />
+            </div>
         </div>
     </div>
 </template>
@@ -29,6 +35,9 @@ export default {
         value: {
             type: [String, Number],
         },
+        label: {
+            type: String,
+        },
     },
 }
 </script>
@@ -36,7 +45,11 @@ export default {
 <style scoped>
 .radios {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-bottom: 2rem;
+}
+
+.radios-label {
+    color: var(--color-primary3)
 }
 </style>

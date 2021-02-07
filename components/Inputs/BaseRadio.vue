@@ -56,8 +56,8 @@ export default {
 input:checked + .radiobox:before {
     position: absolute;
     content: '';
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-color: var(--color-primary2);
     border-radius: 50%;
     top: 50%;

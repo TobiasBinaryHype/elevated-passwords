@@ -49,18 +49,22 @@ a {
 
 .nav-item,
 .logo {
-    padding: 1rem;
+    margin: 1rem;
 }
 
 .logo:first-child {
-    padding-left: 0;
+    margin-left: 0;
 }
 
 .nav-item:last-child {
-    padding-right: 0;
+    margin-right: 0;
+}
+
+.nav-item {
+    font-weight: 600
 }
 
 nav .nuxt-link-active {
-    color: var(--color-highlight);
+    border-bottom: 2px solid var(--color-highlight);
 }
 </style>

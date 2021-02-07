@@ -37,5 +37,6 @@ button {
     font-size: 16px;
     box-shadow: 0px 0px 5px rgba(239, 143, 34, 0.7);
     cursor: pointer;
+    outline: none;
 }
 </style>

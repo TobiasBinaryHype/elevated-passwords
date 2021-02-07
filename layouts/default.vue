@@ -36,8 +36,9 @@ p,
 h1,
 h2,
 h3,
-h4 {
-    color: var(--color-primary2);
+h4,
+strong {
+    color: var(--color-primary3);
 }
 
 @media (max-width: 480px) {

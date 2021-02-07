@@ -3,7 +3,6 @@
         <label :for="label" v-if="label">{{ label }}</label>
         <input
             :value="value"
-            :placeholder="placeholder"
             @input="$emit('input', $event.target.value)"
             type="text"
             :class="{'big-font': bigFont}"
@@ -29,14 +28,10 @@ export default {
             type: Boolean,
             default: false
         },
-        placeholder: {
-            type: String,
-            default: ''
-        },
         readonly: {
             type: Boolean,
             default: false
-        }
+        },
     },
 }
 </script>
@@ -49,11 +44,15 @@ input {
     width: 100%;
     padding: 13px;
     font-family: var(--font-family);
-    color: var(--color-primary2);
-    font-size: 24px;
+    color: var(--color-primary3);
+    font-size: 20px;
+}
+
+label {
+    color: var(--color-primary3)
 }
 
 .big-font {
-    font-size: 30px;
+    font-size: 26px;
 }
 </style>

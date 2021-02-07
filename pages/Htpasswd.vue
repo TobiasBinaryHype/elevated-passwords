@@ -29,4 +29,25 @@ export default {
 </script>
 
 <style scoped>
+.generator {
+    max-width: 100%;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+@media (min-width: 1921px) {
+    .generator {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .generator {
+        width: 90%;
+        max-width: 98%;
+    }
+}
+.subheadline {
+    margin-bottom: 2rem;
+}
 </style>

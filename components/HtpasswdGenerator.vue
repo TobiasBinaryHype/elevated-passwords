@@ -17,12 +17,13 @@
             v-model="selectedCryptType"
             name="cryptTypes"
             :options="cryptTypes"
+            label="Verschlüsselungsmethode"
         />
         <BaseInput
             v-model="result"
             :bigFont="true"
             :readonly="true"
-            placeholder="Ergebnis"
+            label="Ergebnis"
             class="result"
         ></BaseInput>
         <div
@@ -87,6 +88,19 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .username-password {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .username-password > * {
+        flex: 1 1 100%;
+        padding: 0 !important;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .username-password > * {

@@ -28,10 +28,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .generator {
     max-width: 100%;
-    width: 40%;
+    width: 60%;
     margin: 2rem auto;
 }
 

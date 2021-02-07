@@ -7,6 +7,7 @@
             v-model="resultPassword"
             :bigFont="true"
             :readonly="true"
+            label="Ergebnis"
         ></BaseInput>
         <div class="generator-inputs">
             <BaseRange
@@ -35,8 +36,8 @@
 
             </div>
             <div class="error" v-if="error">{{error}}</div>
-            <BaseSubmit label="Passwort generieren" />
         </div>
+            <BaseSubmit label="Passwort generieren" />
     </form>
 </template>
 <script>
@@ -90,8 +91,34 @@ export default {
 }
 
 .generator-inputs {
+    display: flex;
+    justify-content: center;
     width: 80%;
-    margin: 0 auto;
+    margin: 1rem auto;
+}
+
+@media (max-width: 920px) {
+    .generator-inputs {
+        flex-direction: column;
+        margin: 1rem auto;
+        width: 100%
+    }
+
+    .generator-inputs > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.generator-inputs > * {
+    flex: 1 1 50%;
+}
+
+.generator-inputs > *:first-child {
+    padding-right: 1rem;
+}
+
+.generator-inputs > *:last-child {
+    padding-left: 1rem;
 }
 
 .generator-checkboxes {
@@ -99,11 +126,15 @@ export default {
     grid-template-columns: 50% 50%;
 }
 
+.generator-checkboxes > * {
+    justify-self: center;
+    padding: 7px;
+}
 .generator-checkboxes > *:nth-child(odd) {
     justify-self: start;
 }
 .generator-checkboxes > *:nth-child(even) {
-    justify-self: end;
+    justify-self: start;
 }
 
 @media (max-width: 680px) {

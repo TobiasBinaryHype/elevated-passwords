@@ -33,8 +33,7 @@ export default {
 .slidercheckbox {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 10px;
+    /* flex-wrap: wrap; */
     cursor: pointer;
     user-select: none;
 }
