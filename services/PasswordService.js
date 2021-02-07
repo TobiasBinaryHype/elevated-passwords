@@ -1,21 +1,6 @@
 import md5 from 'md5'
 import sha1 from 'js-sha1'
 
-const generateEasyRemeberPassword = () => {
-  let vowels = 'aeiou'
-  let consonants = 'bcdfghjklmnpqrstvwxyz'
-  let result = ''
-
-  result += consonants[getRandomNumber(consonants.length - 1)]
-  result += vowels[getRandomNumber(vowels.length - 1)]
-  result += consonants[getRandomNumber(consonants.length - 1)]
-  result += vowels[getRandomNumber(vowels.length - 1)]
-  result += vowels[getRandomNumber(vowels.length - 1)]
-  result += consonants[getRandomNumber(consonants.length - 1)]
-
-  return result
-}
-
 const generatePassword = (selectedTypes, passwordLength) => {
   if (
     selectedTypes.lower ||
