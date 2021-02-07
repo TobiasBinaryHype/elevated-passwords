@@ -42,6 +42,7 @@ export default {
     }
 }
 .subheadline {
+    color: var(--color-primary3);
     margin-bottom: 2rem;
 }
 </style>

@@ -1,5 +1,5 @@
-import md5 from 'crypto-js/md5'
-import sha1 from 'crypto-js/sha1'
+import md5 from 'md5'
+import sha1 from 'js-sha1'
 
 const generateEasyRemeberPassword = () => {
   let vowels = 'aeiou'

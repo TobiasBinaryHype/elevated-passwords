@@ -11,3 +11,36 @@ a {
     text-decoration: none;
     color: var(--color-primary3)
 }
+
+.content a {
+    color: var(--color-highlight);
+}
+
+.content a:hover {
+    color: var(--color-primary3);
+}
+
+a:hover {
+    color: var(--color-highlight);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+strong {
+    color: var(--color-primary3);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 1.2em;
+    }
+}

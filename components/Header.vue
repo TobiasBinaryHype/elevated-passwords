@@ -61,7 +61,8 @@ a {
 }
 
 .nav-item {
-    font-weight: 600
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
 }
 
 nav .nuxt-link-active {

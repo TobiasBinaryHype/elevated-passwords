@@ -18,7 +18,7 @@ export default {
                     name: 'description',
                     content:
                         'Verwenden Sie den Online-Passwortgenerator um schnell und einfach ein sicheres Passwort zu erstellen.',
-                },  
+                },
             ],
         }
     },
@@ -30,26 +30,5 @@ export default {
     width: var(--content-width);
     max-width: 98%;
     margin: 0 auto;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-strong {
-    color: var(--color-primary3);
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em;
-        text-align: left;
-    }
-
-    h2 {
-        text-align: left;
-        font-size: 1.2em;
-    }
 }
 </style>

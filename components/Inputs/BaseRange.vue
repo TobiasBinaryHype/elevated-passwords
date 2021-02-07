@@ -64,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+label {
+    color: var(--color-primary2)
+}
 .range-text {
     margin-bottom: 1rem;
 }

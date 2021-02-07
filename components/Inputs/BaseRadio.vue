@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style scoped>
+label {
+    color: var(--color-primary2)
+}
 .radio {
     display: flex;
     align-items: center;

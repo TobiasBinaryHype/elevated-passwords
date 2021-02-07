@@ -30,10 +30,13 @@ export default {
 </script>
 
 <style scoped>
+label {
+    color: var(--color-primary2)
+}
+
 .slidercheckbox {
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; */
     cursor: pointer;
     user-select: none;
 }
