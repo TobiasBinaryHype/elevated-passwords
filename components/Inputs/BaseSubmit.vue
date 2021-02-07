@@ -30,7 +30,7 @@ div {
 button {
     border: none;
     background-color: var(--color-highlight);
-    color: white;
+    color: var(--color-primary2);
     font-family: var(--font-family);
     padding: 12px;
     border-radius: 10px;
