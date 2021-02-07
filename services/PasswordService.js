@@ -1,4 +1,5 @@
-import CryptoJS from 'crypto-js'
+import md5 from 'crypto-js/md5'
+import sha1 from 'crypto-js/sha1';
 
 const generateEasyRemeberPassword = () => {
   let vowels = 'aeiou'
@@ -142,10 +143,10 @@ const generateHash = (username, password, cryptType = 'md5') => {
 
   switch (cryptType) {
     case 'md5':
-      hash = CryptoJS.MD5(password).toString()
+      hash = md5(password).toString()
       break
     case 'sha1':
-      hash = CryptoJS.SHA1(password).toString()
+      hash = sha1(password).toString()
       break
   }
 

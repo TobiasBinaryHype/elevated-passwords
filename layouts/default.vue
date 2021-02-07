@@ -17,8 +17,8 @@ export default {
                     hid: 'description',
                     name: 'description',
                     content:
-                        'Where you can find all the events taking place in your neighborhood',
-                },
+                        'Verwenden Sie den Online-Passwortgenerator um schnell und einfach ein sicheres Passwort zu erstellen.',
+                },  
             ],
         }
     },
