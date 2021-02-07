@@ -35,6 +35,13 @@ a {
     margin: 0 auto; 
 }
 
+@media (max-width: 1280px) {
+    .header-wrapper {
+        width: 90%;
+        max-width: 98%;
+    }
+}
+
 .logo {
     font-size: 22px;
     font-weight: 600;

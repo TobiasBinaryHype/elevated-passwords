@@ -4,102 +4,88 @@
         <Nuxt />
         <div class="content">
             <h2>Die besten Passwort Tipps</h2>
-            <div class="image-text">
-                <div class="image">
-                    <img
-                        src="~assets/img/password1.svg"
-                        alt="password1"
-                    >
-                </div>
-                <div class="text">
-                    <div class="text-item">
-                        <p class="headline"><strong>Benutze immer ein einzigartiges Passwort</strong> für jeden Account den du erstellt.</p>
-                        <p>Bei Sicherheitslücken einer Seite ist es für Hacker sehr einfach das selbe Passwort und Nutzername für andere Logins zu benutzen.</p>
-                    </div>
-                    <div class="text-item">
-                        <p class="headline"><strong>Ein Passwort sollte immer mindestens 12 Zeichen lang sein</strong></p>
-                        <p>Kurze Zeichenketten haben weniger Kombinationen und können somit leichter geknackt werden.</p>
-                    </div>
-                    <div class="text-item">
-                        <p class="headline"><strong>Vermeide einfache, weit verbreitete Passwörter wie 123456 oder password</strong></p>
-                        <p>Diese Passwörter haben meist nicht nur wenige Zeichen, sie sind auch jedermann bekannt.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="image-text mobile-reverse">
-                <div class="text">
-                    <div class="text-item">
-                        <p class="headline"><strong>Keine personenbezogenen Daten</strong> innerhalb des Passworts</p>
-                        <p>Name, Geburtsdatem, Adresse - Solche Daten sind meist im Internet zu finden und somit auch von jedem einsehbar. Auch wen sie leicht zu merken sind, sollten diese vermieden werden um die Passwortsicherheit zu gewährleisten.</p>
-                    </div>
-                    <div class="text-item">
-                        <p class="headline"><strong>Ändere dein Passwort</strong> wenn du einen Grund dafür hast</p>
-                        <p>Nachdem du ein Passwort gewollt oder ungewollt geteilt hast, einer Sicherheitslücke zum Opfer gefallen bist oder mindestens einmal im Jahr sollte dein Kennwort geändert werden.</p>
-                    </div>
-                </div>
-                <div class="image">
-                    <img
-                        src="~assets/img/password2.svg"
-                        alt="password1"
-                    >
-                </div>
-            </div>
+            <ImageText
+                :textItems="passwordTips1"
+                :image="image1"
+            ></ImageText>
+            <ImageText
+                :textItems="passwordTips2"
+                :image="image2"
+                :reversed="true"
+            ></ImageText>
         </div>
         <Footer />
     </div>
 </template>
 
 <script>
-
 export default {
     name: 'default',
+    head() {
+        return {
+            titleTemplate: '%s - Elevated Passwords',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content:
+                        'Where you can find all the events taking place in your neighborhood',
+                },
+            ],
+        }
+    },
+    data() {
+        return {
+            passwordTips1: [
+                {
+                    headline:
+                        'Benutze immer ein einzigartiges Passwort für jeden Account den du erstellt',
+                    text:
+                        'Bei Sicherheitslücken einer Seite ist es für Hacker sehr einfach das selbe Passwort und Nutzername für andere Logins zu benutzen.',
+                },
+                {
+                    headline:
+                        'Ein Passwort sollte immer mindestens 12 Zeichen lang sein',
+                    text:
+                        'Kurze Zeichenketten haben weniger Kombinationen und können somit leichter geknackt werden.',
+                },
+                {
+                    headline:
+                        'Vermeide einfache, weit verbreitete Passwörter wie 123456 oder password',
+                    text:
+                        'Diese Passwörter haben meist nicht nur wenige Zeichen, sie sind auch jedermann bekannt.',
+                },
+            ],
+            passwordTips2: [
+                {
+                    headline:
+                        'Keine personenbezogenen Daten innerhalb des Passworts',
+                    text:
+                        'Name, Geburtsdatem, Adresse - Solche Daten sind meist im Internet zu finden und somit auch von jedem einsehbar. Auch wen sie leicht zu merken sind, sollten diese vermieden werden um die Passwortsicherheit zu gewährleisten.',
+                },
+                {
+                    headline:
+                        'Ändere dein Passwort wenn du einen Grund dafür hast',
+                    text:
+                        'Nachdem du ein Passwort gewollt oder ungewollt geteilt hast, einer Sicherheitslücke zum Opfer gefallen bist oder mindestens einmal im Jahr sollte dein Kennwort geändert werden.',
+                },
+            ],
+            image1: {
+                url: require('~/assets/img/password1.svg'),
+                alt: 'password1lul',
+            },
+            image2: {
+                url: require('~/assets/img/password2.svg'),
+                alt: 'password2lul',
+            },
+        }
+    },
 }
 </script>
 
 <style>
-.image-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-}
-
-
-.image-text .image {
-    width: 50%;
-    padding: 0 3rem;
-}
-
-.image-text .image img {
-    width: 100%;
-}
-
-.image-text .text {
-    width: 50%;
-    padding: 2rem;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 18px;
-}
-
-.headline {
-    margin-bottom: 5px;
-}
-
-@media (max-width: 1280px) {
-    .image-text .image,
-    .image-text .text {
-        width: 100%;
-    }
-
-    .image-text.mobile-reverse {
-        flex-direction: column-reverse;
-    }
+h2 {
+    text-align: center;
 }
 
 .content {
@@ -114,5 +100,11 @@ h2,
 h3,
 h4 {
     color: var(--color-primary2);
+}
+</style>
+
+<style scoped>
+.content {
+    padding: 2rem 0;
 }
 </style>

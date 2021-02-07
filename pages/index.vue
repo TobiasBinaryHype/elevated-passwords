@@ -1,9 +1,12 @@
 <template>
-    <div class="content">
+    <div class="generator">
         <div>
             <h1 class="title">
                 Elevated Passwords
             </h1>
+            <div class="subheadline">Schnell und sicher ein zufälliges Passwort generieren.
+                Lokal im Browser - ohne Umwege.</div>
+            <PasswordGenerator />
         </div>
     </div>
 </template>
@@ -11,9 +14,28 @@
 <script>
 export default {
     name: 'Index',
+    head() {
+        return {
+            title: 'Passwort Generator',
+        }
+    },
 }
 </script>
 
 <style>
+.generator {
+    max-width: 100%;
+    width: 40%;
+    margin: 2rem auto;
+}
 
+@media (max-width: 1280px) {
+    .generator {
+        width: 90%;
+        max-width: 98%;
+    }
+}
+.subheadline {
+    margin-bottom: 2rem;
+}
 </style>

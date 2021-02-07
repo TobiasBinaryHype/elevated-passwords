@@ -27,6 +27,7 @@ a {
 }
 footer {
     width: 100%;
+    margin-top: 2rem;
     background-color: var(--color-primary3);
 }
 

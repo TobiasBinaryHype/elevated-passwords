@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# exclude datenschutz/impressum
+/assets/content/*
