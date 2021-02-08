@@ -10,7 +10,7 @@ export default () => ({
             headline:
                 'Ein Passwort sollte immer mindestens 12 Zeichen lang sein',
             text:
-                'Kurze Zeichenketten haben weniger Kombinationen und können somit leichter geknackt werden.',
+                'Kurze Zeichenketten haben weniger Kombinationen und können somit leichter geknackt werden. Benutze den obigen Generator um schnell und einfach ein sicheres Passwort zu erstellen.',
         },
         {
             headline:
@@ -24,7 +24,7 @@ export default () => ({
             headline:
                 'Keine personenbezogenen Daten innerhalb des Passworts',
             text:
-                'Name, Geburtsdatem, Adresse - Solche Daten sind meist im Internet zu finden und somit auch von jedem einsehbar. Auch wen sie leicht zu merken sind, sollten diese vermieden werden um die Passwortsicherheit zu gewährleisten.',
+                'Name, Geburtsdatem, Adresse - Solche Daten sind meist im Internet zu finden und somit auch von jedem einsehbar. Auch wenn sie leicht zu merken sind, sollten diese vermieden werden um die Passwortsicherheit zu gewährleisten.',
         },
         {
             headline:
@@ -35,10 +35,10 @@ export default () => ({
     ],
     image1: {
         url: require('~/assets/img/password1.svg'),
-        alt: 'password1lul',
+        alt: 'Illustration Passworteingabe',
     },
     image2: {
         url: require('~/assets/img/password2.svg'),
-        alt: 'password2lul',
+        alt: 'Illustration Passwort',
     },
 });

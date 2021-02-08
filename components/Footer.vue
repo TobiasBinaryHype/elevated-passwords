@@ -45,4 +45,8 @@ footer {
     color: white;
     padding: 1rem;
 }
+
+.footer-wrapper a:hover{
+    color: var(--color-highlight)
+}
 </style>
