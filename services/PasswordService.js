@@ -1,5 +1,4 @@
-import md5 from 'md5'
-import sha1 from 'js-sha1'
+import md5 from 'apache-md5';
 
 const generatePassword = (selectedTypes, passwordLength) => {
   if (
@@ -121,21 +120,10 @@ const getRandomNumber = (max, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-const generateHash = (username, password, cryptType = 'md5') => {
+const generateHash = (username, password) => {
   if (!username || !password) throw 'Bitte Nutzername und Passwort eingeben.'
 
-  let hash = ''
-
-  switch (cryptType) {
-    case 'md5':
-      hash = md5(password).toString()
-      break
-    case 'sha1':
-      hash = sha1(password).toString()
-      break
-  }
-
-  return `${username}:${hash}`
+  return `${username}:${md5(password)}`
 }
 
 export default {

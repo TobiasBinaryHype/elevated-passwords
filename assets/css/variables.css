@@ -12,5 +12,6 @@
   --color-highlight: #ef8f22;
   --font-family: 'Poppins';
   --content-width: 1640px;
+  --generator-width: 600px;
   --break-desktop: 1280px;
 }

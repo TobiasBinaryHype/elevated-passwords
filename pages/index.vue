@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .generator {
     max-width: 100%;
-    width: 60%;
+    width: var(--generator-width);
     margin: 2rem auto;
 }
 

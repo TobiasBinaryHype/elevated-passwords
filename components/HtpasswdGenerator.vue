@@ -13,12 +13,6 @@
                 v-model="password"
             />
         </div>
-        <BaseRadioGroup
-            v-model="selectedCryptType"
-            name="cryptTypes"
-            :options="cryptTypes"
-            label="Verschlüsselungsmethode"
-        />
         <BaseInput
             v-model="result"
             :bigFont="true"
@@ -43,11 +37,6 @@ export default {
             result: '',
             username: '',
             password: '',
-            selectedCryptType: 'md5',
-            cryptTypes: [
-                { label: 'md5', value: 'md5' },
-                { label: 'sha1', value: 'sha1' },
-            ],
             error: '',
         }
     },
@@ -57,8 +46,7 @@ export default {
                 this.error = ''
                 this.result = PasswordService.generateHash(
                     this.username,
-                    this.password,
-                    this.selectedCryptType
+                    this.password
                 )
             } catch (e) {
                 this.error = e

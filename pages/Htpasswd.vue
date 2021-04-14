@@ -31,22 +31,10 @@ export default {
 <style scoped>
 .generator {
     max-width: 100%;
-    width: 50%;
+    width: var(--generator-width);
     margin: 2rem auto;
 }
 
-@media (min-width: 1921px) {
-    .generator {
-        width: 40%;
-    }
-}
-
-@media (max-width: 1280px) {
-    .generator {
-        width: 90%;
-        max-width: 98%;
-    }
-}
 .subheadline {
     color: var(--color-primary3);
     margin-bottom: 2rem;

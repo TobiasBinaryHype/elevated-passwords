@@ -93,6 +93,7 @@ export default {
 .generator-inputs {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 80%;
     margin: 1rem auto;
 }
@@ -109,12 +110,9 @@ export default {
     }
 }
 
-.generator-inputs > * {
-    flex: 1 1 50%;
-}
-
 .generator-inputs > *:first-child {
     padding-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .generator-inputs > *:last-child {
